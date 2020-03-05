@@ -30,8 +30,9 @@ module.exports = {
       "version": "detect"
     }
   },
-  "plugins": ["@typescript-eslint", "react", "jsx-control-statements", "prettier"],
+  "plugins": ["react","@typescript-eslint", "react", "jsx-control-statements", "prettier"],
   "rules": {
+    "react/prop-types": 0, // 使用了typescript 可以不强制使用prop-type检验
     "prettier/prettier": 2,
     "no-extra-semi": 2, // 禁止不必要的分号
     "quotes": ['error', 'single'], // 强制使用单引号

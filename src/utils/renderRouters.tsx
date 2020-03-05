@@ -12,8 +12,9 @@ const renderRoutes = (routes: any, authed: boolean, authPath = '/login', extraPr
           exact={route.exact}
           strict={route.strict}
           render={(props) => {
-            document.title = route.title || 'react-app'
+            document.title = route.title || 'Tik Tok'
             beforeRouter(route)
+            // return route.render ? route.render(props) : <route.component {...props} {...extraProps} route={route} />
             if (!route.requireAuth || authed || route.path === authPath) {
               return <route.component {...props} {...extraProps} route={route} />
             }

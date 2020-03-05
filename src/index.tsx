@@ -1,6 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from '@/App'
-import '@/style.less'
+import '@/static/styles/reset.less'
+import StoreReducer from '@/reducer'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(
+  <StoreReducer>
+    <App />
+  </StoreReducer>,
+  document.getElementById('root')
+)

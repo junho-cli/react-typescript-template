@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import renderRoutes from '@/utils/renderRouters'
 import { routes, basename } from './router/router'
-import '@/App.less'
+import axios from 'axios'
 
 const authed = false
 const authPath = '/login'

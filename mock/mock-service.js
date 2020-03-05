@@ -1,24 +1,18 @@
-// 启动 koa server 来提供 mock
-// 或者直接用 mockjs 拦截 ajax
 const Koa = require('koa');
-const Router = require('koa-router');
 const app = new Koa();
+const path = require('path');
+const serve = require('koa-static');
+const myRouter = require('./router'); 
 
-const data = require('./data');
+// 绑定静态目录
+const main = serve(path.join(__dirname+'/static'));
+app.use(main);
 
-let home = new Router();
-home.get('/', async ctx => {
-  ctx.body = 'Hello World!';
+// 绑定路由
+app
+  .use(myRouter.routes())
+  .use(myRouter.allowedMethods())
+ 
+app.listen(3001,function(){
+    console.log("监听3001端口")
 });
-
-let router = new Router();
-router.use('/', home.routes(), home.allowedMethods());
-
-router.use('/mock', data.routes(), data.allowedMethods());
-
-app.use(router.routes()).use(router.allowedMethods());
-
-const port = 3333;
-
-app.listen(port);
-console.log('Mock Server is running at http://localhost:' + port);

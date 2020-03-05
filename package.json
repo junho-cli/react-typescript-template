@@ -1,13 +1,16 @@
 {
-  "name": "react-ts-template",
+  "name": "React-Tiktok-App",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
     "@loadable/component": "^5.10.2",
+    "axios": "^0.19.2",
     "core-js": "^2.6.9",
+    "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-loadable": "^5.5.0",
+    "react-router-config": "^5.1.1",
     "react-router-dom": "^5.0.1"
   },
   "scripts": {
@@ -34,8 +37,8 @@
     "@svgr/webpack": "^4.3.2",
     "@types/jest": "^24.0.18",
     "@types/node": "12.7.2",
-    "@types/react": "16.9.2",
-    "@types/react-dom": "16.9.0",
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
     "@types/react-router-config": "^5.0.0",
     "@types/react-router-dom": "^4.3.5",
     "@typescript-eslint/eslint-plugin": "^2.0.0",
@@ -67,8 +70,10 @@
     "husky": "^3.0.4",
     "interpolate-html-plugin": "^3.0.0",
     "jest": "^24.9.0",
+    "junho-mobile-touch": "0.0.1",
     "koa": "^2.8.1",
     "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "lint-staged": "^9.2.5",
@@ -86,7 +91,7 @@
     "style-loader": "^1.0.0",
     "terser-webpack-plugin": "^2.1.0",
     "ts-jest": "^24.0.2",
-    "typescript": "^3.5.3",
+    "typescript": "^3.8.2",
     "url-loader": "^2.1.0",
     "webpack": "^4.39.2",
     "webpack-bundle-analyzer": "^3.4.1",
@@ -107,9 +112,10 @@
       "git add"
     ]
   },
-  "description": "这是一个react+ts+webpack的demo，详情见[https://segmentfault.com/a/1190000020332804?_ea=18760055](https://segmentfault.com/a/1190000020332804?_ea=18760055)",
+  "description": "React tiktok App",
   "main": ".commitlintrc.js",
   "keywords": [],
-  "author": "yourName",
-  "license": "ISC"
+  "author": "junhoChan",
+  "email": "857252831@qq.com",
+  "license": "MIT"
 }
